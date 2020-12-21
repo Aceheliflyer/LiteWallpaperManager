@@ -4,6 +4,7 @@
   "description": "A Git inspired lightweight wallpaper manager.",
   "main": "index.js",
   "scripts": {
+    "build": "rm -rf ./dist/ && tsc",
     "lint:ts": "ts-standard --verbose | snazzy",
     "lint:ts-fix": "ts-standard --verbose --fix | snazzy",
     "test": "echo \"Error: no test specified\" && exit 1"
