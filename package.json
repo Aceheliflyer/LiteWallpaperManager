@@ -1,0 +1,34 @@
+{
+  "name": "litewallpapermanager",
+  "version": "1.0.0",
+  "description": "A Git inspired lightweight wallpaper manager.",
+  "main": "index.js",
+  "scripts": {
+    "lint:ts": "ts-standard --verbose | snazzy",
+    "lint:ts-fix": "ts-standard --verbose --fix | snazzy",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Aceheliflyer/LiteWallpaperManager.git"
+  },
+  "keywords": [],
+  "author": "Jarrett Aiken",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Aceheliflyer/LiteWallpaperManager/issues"
+  },
+  "homepage": "https://github.com/Aceheliflyer/LiteWallpaperManager#readme",
+  "dependencies": {
+    "ts-node": "^9.1.1",
+    "typescript": "^4.1.3"
+  },
+  "devDependencies": {
+    "@tsconfig/node14": "^1.0.0",
+    "@types/node": "^14.14.14",
+    "husky": "^4.3.6",
+    "nodemon": "^2.0.6",
+    "snazzy": "^9.0.0",
+    "ts-standard": "^10.0.0"
+  }
+}
