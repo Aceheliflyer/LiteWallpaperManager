@@ -1,6 +1,7 @@
 import settings from '../config/settings.json'
 import wallpapers from '../config/wp-list.json'
 import wget from 'wget-improved'
+import waifu2x from 'waifu2x'
 import crypto from 'crypto'
 import fs from 'fs-extra'
 import path from 'path'
@@ -22,3 +23,10 @@ wallpapers.forEach(img => {
 
   wget.download(img.url, filePath)
 })
+
+fs.ensureDirSync(settings.general.waifu2xPath)
+waifu2x.upscaleImages(
+  settings.general.downloadPath,
+  settings.general.waifu2xPath,
+  { noise: 2, scale: 2, recursion: 1, recursionFormat: 'png' }
+)
