@@ -1,0 +1,11 @@
+{
+  "general": {
+    "downloadPath": "../temp/download",
+    "waifu2xPath": "../temp/waifu2x"
+  },
+  "waifu2x": {
+    "noise": 2,
+    "scale": 2,
+    "recursionFormat": "png"
+  }
+}
