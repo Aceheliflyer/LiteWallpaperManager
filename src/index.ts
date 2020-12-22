@@ -2,6 +2,8 @@ import settings from '../config/settings.json'
 import wallpapers from '../config/wp-list.json'
 import wget from 'wget-improved'
 import crypto from 'crypto'
+import fs from 'fs-extra'
+import path from 'path'
 
 wallpapers.forEach(img => {
   var webFile: string = img.url.split('/').reverse()[0]
@@ -14,5 +16,9 @@ wallpapers.forEach(img => {
     .createHash('sha256')
     .update(webFileName)
     .digest('hex')
-  wget.download(img.url, `${settings.general.downloadPath}/${nameHash}.${webFileExt}`)
+
+  fs.ensureDirSync(settings.general.downloadPath)
+  var filePath = path.resolve(path.join(`${settings.general.downloadPath}/${nameHash}.${webFileExt}`))
+
+  wget.download(img.url, filePath)
 })

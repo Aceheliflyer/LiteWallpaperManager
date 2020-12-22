@@ -1,7 +1,7 @@
 {
   "general": {
-    "downloadPath": "../temp/download",
-    "waifu2xPath": "../temp/waifu2x"
+    "downloadPath": "temp",
+    "waifu2xPath": "waifu2x-compiled"
   },
   "waifu2x": {
     "noise": 2,
