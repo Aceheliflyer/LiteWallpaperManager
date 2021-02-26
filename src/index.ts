@@ -25,8 +25,10 @@ wallpapers.forEach(img => {
 })
 
 fs.ensureDirSync(settings.general.waifu2xPath)
-waifu2x.upscaleImages(
-  settings.general.downloadPath,
-  settings.general.waifu2xPath,
-  { noise: 2, scale: 2, recursion: 1, recursionFormat: 'png' }
-)
+waifu2x
+  .upscaleImages(
+    settings.general.downloadPath,
+    settings.general.waifu2xPath,
+    { noise: 2, scale: 2, recursive: true }
+  )
+  .catch(error => console.error(error))
